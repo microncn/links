@@ -29,7 +29,6 @@ export default async function Page() {
           key={link.name}
           href={link.href}
           target="_blank"
-          onClick={() => umami.track("social", { name: link.name })}
           className="bg-neutral-900 font-medium text-sm text-white rounded-md flex justify-center items-center py-3 ring-offset-2 ring-offset-black ring-1 ring-neutral-900 hover:bg-neutral-800 duration-200"
         >
           {link.name}
