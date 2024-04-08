@@ -15,7 +15,7 @@ const links = [
   },
   {
     name: "Instagram",
-    href: "https://instagram.com/microncn",
+    href: "https://instagram.com/defnotwan",
   },
   {
     name: "X (formerly Twitter)",
