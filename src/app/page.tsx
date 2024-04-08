@@ -2,6 +2,12 @@
 
 import Link from "next/link";
 
+declare global {
+  interface Window {
+    umami: any;
+  }
+}
+
 const links = [
   {
     name: "GitHub",
@@ -17,7 +23,7 @@ const links = [
   },
 ];
 
-export default async function Page() {
+export default function Page() {
   return (
     <div className="max-w-[400px] w-full flex mx-auto flex-col space-y-4 h-screen justify-center px-4">
       <header className="text-center">
@@ -29,6 +35,7 @@ export default async function Page() {
           key={link.name}
           href={link.href}
           target="_blank"
+          onClick={() => window.umami.track("social", { name: link.name })}
           className="bg-neutral-900 font-medium text-sm text-white rounded-md flex justify-center items-center py-3 ring-offset-2 ring-offset-black ring-1 ring-neutral-900 hover:bg-neutral-800 duration-200"
         >
           {link.name}
